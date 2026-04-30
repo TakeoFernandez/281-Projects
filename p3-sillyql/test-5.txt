@@ -1,0 +1,28 @@
+# Test File: 5 # Testing GENERATE and PRINT WHERE
+CREATE cities 5 string string int double bool name state population area is_capital?
+CREATE 281class 3 string string bool emotion person Y/N
+INSERT INTO cities 7 ROWS
+Ann_Arbor Michigan 120782 28.69 false
+Lansing Michigan 116020 36.68 true
+Miami Florida 453579 55.25 false
+San_Francisco California 864816 46.87 false
+Albany New_York 98111 21.93 true
+Chicago Illinois 2705000 234 false
+St_Louis Missouri 315685 65.98 false
+INSERT INTO 281class 8 ROWS
+happy Darden true
+stressed students false
+busy office_hours true
+stressed students true
+stressed Paoletti true
+happy Darden true
+happy Sith true
+victorious Sith true
+GENERATE FOR cities hash INDEX ON name
+GENERATE FOR cities bst INDEX ON population
+GENERATE FOR 281class hash INDEX ON emotion
+PRINT FROM cities 2 name is_capital? WHERE population > 100000
+PRINT FROM 281class 2 person Y/N WHERE emotion = stressed
+PRINT FROM 281class 2 person Y/N WHERE person = Darden
+DELETE FROM cities WHERE is_capital? = true
+QUIT

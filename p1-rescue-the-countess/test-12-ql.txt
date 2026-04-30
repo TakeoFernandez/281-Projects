@@ -1,0 +1,10 @@
+M
+1
+5
+//sample where some warp pipes are invalid
+//castle room 0
+#S.#.
+##..#
+#.!..
+#C.#.
+#....

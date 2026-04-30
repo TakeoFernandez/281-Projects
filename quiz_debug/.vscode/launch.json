@@ -1,0 +1,12 @@
+{
+    "configurations": [
+    {
+        "name": "Debug",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/quiz_funcs.cpp",
+        "args": [],
+        "cwd": "${fileDirname}",
+    }
+    ]
+}

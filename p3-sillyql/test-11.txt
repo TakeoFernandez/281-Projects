@@ -1,0 +1,24 @@
+# Test File: 10 # Testing GENERATE with no columns
+CREATE cities 5 string string int double bool name state population area is_capital?
+PRINT FROM cities 2 name state ALL
+PRINT FROM cities 2 name state WHERE population > 100000
+GENERATE FOR cities hash INDEX ON name
+PRINT FROM cities 2 name state WHERE name = Ann_Arbor
+INSERT INTO cities 4 ROWS
+Ann_Arbor Michigan 120782 28.69 false
+Lansing Michigan 116020 36.68 true
+Miami Florida 453579 55.25 false
+San_Francisco California 864816 46.87 false
+PRINT FROM cities 2 name state WHERE name = Ann_Arbor
+DELETE FROM cities WHERE population > 1
+PRINT FROM cities 2 name state WHERE name = Ann_Arbor
+INSERT INTO cities 3 ROWS
+Ann_Arbor Michigan 120782 28.69 false
+Lansing Michigan 116020 36.68 true
+Miami Florida 453579 55.25 false
+PRINT FROM cities 2 name state WHERE name = Ann_Arbor
+CREATE books 3 string string int title author pages
+GENERATE FOR books bst INDEX ON pages
+GENERATE FOR cities bst INDEX ON population
+PRINT FROM cities 2 name state WHERE population > 1000
+QUIT

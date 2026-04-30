@@ -1,0 +1,19 @@
+#testing statistics mode when no zombies die
+quiver-capacity: 1
+random-seed: 8471921
+max-rand-distance: 50
+max-rand-speed: 60
+max-rand-health: 3
+---
+round: 1
+random-zombies: 0
+named-zombies: 2
+ConeHead distance: 100 speed: 1 health: 10
+BucketHead distance: 100 speed: 1 health: 15
+---
+round: 4
+random-zombies: 0
+named-zombies: 3
+TakeoFernandez distance: 1 speed: 1 health: 100
+RegularZombie distance: 100 speed: 1 health: 3
+FootballZombie distance: 100 speed: 1 health: 20

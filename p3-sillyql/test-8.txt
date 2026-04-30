@@ -1,0 +1,17 @@
+# Test File: 8 # Testing GENERATE on INSERT, DELETE, PRINT WHERE, and JOIN
+CREATE cities 5 string string int double bool name state population area is_capital?
+GENERATE FOR cities bst INDEX ON population
+INSERT INTO cities 4 ROWS
+Ann_Arbor Michigan 120782 28.69 false
+Lansing Michigan 116020 36.68 true
+Miami Florida 453579 55.25 false
+San_Francisco California 864816 46.87 false
+GENERATE FOR cities bst INDEX ON population
+INSERT INTO cities 3 ROWS
+Albany New_York 98111 21.93 true
+Chicago Illinois 2705000 234 false
+St_Louis Missouri 315685 65.98 false
+PRINT FROM cities 3 name population is_capital? WHERE population < 200000
+DELETE FROM cities WHERE is_capital? = false
+PRINT FROM cities 3 name population is_capital? WHERE population < 200000
+QUIT

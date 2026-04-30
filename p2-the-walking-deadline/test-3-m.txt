@@ -1,0 +1,14 @@
+# test median on
+quiver-capacity: 25
+random-seed: 2314863
+max-rand-distance: 50
+max-rand-speed: 1
+max-rand-health: 100
+---
+round: 1
+random-zombies: 5
+named-zombies: 0
+---
+round: 5
+random-zombies: 30
+named-zombies: 0

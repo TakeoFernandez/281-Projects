@@ -1,0 +1,14 @@
+# test not making zombies on first round
+quiver-capacity: 25
+random-seed: 2314863
+max-rand-distance: 50
+max-rand-speed: 60
+max-rand-health: 5
+---
+round: 5
+random-zombies: 5
+named-zombies: 0
+---
+round: 10
+random-zombies: 30
+named-zombies: 0

@@ -1,0 +1,16 @@
+{
+    "configurations": [
+{
+        "name": "Debug",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/test_debug",
+        "args": [],
+        "stdio": [],
+        "cwd": "${fileDirname}",
+        "env": {
+      "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0"
+        }
+    },
+    ]
+}

@@ -1,0 +1,26 @@
+# Test File: 10 # Testing for error messages
+CREATE cities 5 string string int double bool name state population area is_capital?
+CREATE cities 5 string string int double bool name state population area is_capital?
+CREATE bears 3 string string int name type age
+REMOVE pets
+INSERT INTO books 7 ROWS
+INSERT INTO cities 4 ROWS
+Ann_Arbor Michigan 120782 28.69 false
+Lansing Michigan 116020 36.68 true
+Miami Florida 453579 55.25 false
+San_Francisco California 864816 46.87 false
+INSERT INTO bears 3 ROWS
+teddy stuffed 2
+honey grizzly 13
+cocacola polar 45
+PRINT dogs
+PRINT FROM cities 2 pizza is_capital WHERE is_capital = true
+PRINT FROM cities 2 name state WHERE is_food = true
+DELETE FROM dogs WHERE state = Michigan
+DELETE FROM cities WHERE pages = 10
+GENERATE FOR beachs bst INDEX ON population
+GENERATE FOR cities bst INDEX ON hamburgers
+JOIN pets AND cities WHERE Name = person AND PRINT 3 name 1 emotion 2 likes_dogs? 1
+JOIN cities AND birds WHERE Name = person AND PRINT 3 name 1 emotion 2 likes_dogs? 1
+JOIN cities AND bears WHERE name = type AND PRINT 3 name 1 population 2 population 1
+QUIT

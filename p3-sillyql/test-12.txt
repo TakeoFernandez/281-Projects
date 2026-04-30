@@ -1,0 +1,30 @@
+# Test File: 12 # Testing PRINT_WHERE and JOIN edge cases
+CREATE cities 5 string string int double bool name state population area is_capital?
+INSERT INTO cities 5 ROWS
+Ann_Arbor Michigan 120782 28.69 false
+Lansing Michigan 116020 36.68 true
+Miami Florida 453579 55.25 false
+San_Francisco California 864816 46.87 false
+Ann_Arbor2 Michigan 120782 28.69 false
+GENERATE FOR cities bst INDEX ON state
+PRINT FROM cities 2 name state WHERE state = Michigan
+GENERATE FOR cities bst INDEX ON population
+PRINT FROM cities 2 name state WHERE population < 120782
+PRINT FROM cities 2 name state WHERE population > 120782
+PRINT FROM cities 2 name state WHERE population = 120782
+PRINT FROM cities 2 name state ALL
+CREATE bugs 3 string int double name population lifespan
+CREATE people 3 string string int first_name last_name age
+JOIN bugs AND people WHERE name = last_name AND PRINT 3 name 1 last_name 2 lifespan 1
+INSERT INTO bugs 2 ROWS
+Fly 1000000 1
+Ant 10000000 3
+JOIN bugs AND people WHERE name = last_name AND PRINT 3 name 1 last_name 2 lifespan 1
+INSERT INTO people 3 ROWS
+John Ant 30
+Bob Fly 15
+Old Guy 1000000
+JOIN bugs AND people WHERE name = last_name AND PRINT 3 name 1 last_name 2 lifespan 1
+GENERATE FOR people bst INDEX ON age
+JOIN bugs AND people WHERE population = age AND PRINT 3 name 1 first_name 2 last_name 2
+QUIT

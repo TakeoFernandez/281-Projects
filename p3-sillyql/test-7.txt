@@ -1,0 +1,19 @@
+# Test File: 7 # Testing JOIN
+CREATE cities 5 string string int double bool name state population area is_capital?
+CREATE cities2 5 string string bool double bool name state is_cold? area is_capital?
+INSERT INTO cities 7 ROWS
+Ann_Arbor Michigan 120782 28.69 false
+Lansing Michigan 116020 36.68 true
+Miami Florida 453579 55.25 false
+San_Francisco California 864816 46.87 false
+Albany New_York 98111 21.93 true
+Chicago Illinois 2705000 234 false
+St_Louis Missouri 315685 65.98 false
+INSERT INTO cities2 4 ROWS
+row_0 Michigan true 28.69 false
+row_1 New_York true 36.68 true
+row_2 Florida false 55.25 false
+row_3 Texas true 36.68 true
+GENERATE FOR cities2 hash INDEX ON is_capital?
+JOIN cities AND cities2 WHERE is_capital? = is_cold? AND PRINT 2 name 1 name 2
+QUIT

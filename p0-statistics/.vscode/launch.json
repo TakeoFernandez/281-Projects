@@ -1,0 +1,65 @@
+{
+    "configurations": [
+    {
+        "name": "Debug_reserve",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/project0_debug",
+        "args": ["-m", "reserve"],
+        // "args": [],
+        "stdio": ["sample-r.txt", "output.txt", null],
+        "cwd": "${fileDirname}",
+          "env": {
+      "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0"
+    }
+    },
+
+        {
+        "name": "Debug_resize",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/project0_debug",
+        "args": ["-m", "resize"],
+        "stdio": ["sample-r.txt", "output.txt", null],
+        "cwd": "${fileDirname}",
+          "env": {
+      "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0"
+    }
+    },
+        {
+        "name": "Debug_nosize",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/project0_debug",
+        "args": ["--mode", "nosize"],
+        "stdio": ["sample-n.txt", "output.txt", null],
+        "cwd": "${fileDirname}",
+          "env": {
+      "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0"
+    }
+    },
+
+
+
+
+    /*
+    I don't really know how
+    to make this output to
+    the terminal rather than
+    .txt file
+    */
+    {
+        "name": "terminal_output",
+        "type": "lldb",
+        "request": "launch",
+        "program": "${workspaceFolder}/project0_debug",
+        "args": ["-m", "reserve"],
+        "stdio": ["sample-r.txt"],
+        "console": "integratedTerminal",
+        "cwd": "${fileDirname}",
+          "env": {
+      "ASAN_OPTIONS": "abort_on_error=1:detect_leaks=0"
+    }
+    }
+    ]
+}

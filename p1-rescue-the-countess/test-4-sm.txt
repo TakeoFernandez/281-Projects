@@ -1,0 +1,19 @@
+M
+3
+4
+//sample with pipe to pipe where location of pipe was already discovered
+//castle room 0
+.S..
+#...
+..!.
+#.1.
+//castle room 1
+....
+.0.C
+.!..
+#.0#
+//castle room 2
+....
+#...
+..!.
+#.!.

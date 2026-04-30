@@ -1,0 +1,29 @@
+# Test File: 9 # Testing GENERATE on INSERT, DELETE, PRINT WHERE, and JOIN
+CREATE cities 5 string string int double bool name state population area is_capital?
+CREATE students 4 string int double bool name age gpa is_enrolled
+CREATE books 3 string string int title author pages
+INSERT INTO books 4 ROWS
+The_Hobbit Tolkien 310
+Dune Herbert 412
+Foundation Asimov 255
+Lord_of_the_Rings_Book_1 Tolkien 500
+PRINT FROM books 2 title pages WHERE author = Tolkien
+GENERATE FOR books hash INDEX ON title
+INSERT INTO students 4 ROWS
+Alice 20 3.80 true
+Bob 22 3.20 false
+Charlie 19 3.95 true
+Diana 21 2.85 true
+PRINT FROM books 2 title pages WHERE author = Tolkien
+INSERT INTO books 4 ROWS
+Harry_Potter_and_the_Sorcerer's_Stone Rowling 223
+The_Da_Vinci_Code Brown 450
+Lord_of_the_Rings_Book_2 Tolkien 450
+Lord_of_the_Rings_Book_3 Tolkien 600
+DELETE FROM books WHERE pages < 400
+PRINT FROM books 2 title pages WHERE author = Tolkien
+PRINT FROM books 2 title pages WHERE author = Me
+GENERATE FOR students bst INDEX ON gpa
+PRINT FROM books 2 title pages WHERE author = Brown
+PRINT FROM students 3 gpa age name WHERE gpa > 3.5
+QUIT
